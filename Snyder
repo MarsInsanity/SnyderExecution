@@ -30,8 +30,7 @@ local OpenButton = Instance.new("ImageButton")
 --Properties:
 
 SynderExecutor.Name = "SynderExecutor"
-SynderExecutor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
+SynderExecutor.Parent = game.CoreGui
 ExecutorFrame.Name = "ExecutorFrame"
 ExecutorFrame.Parent = SynderExecutor
 ExecutorFrame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -294,67 +293,67 @@ OpenButton.ImageTransparency = 0.500
 
 -- Scripts:
 
-local function XXPW_fake_script() -- _1.Script 
+local function HTRGOQZ_fake_script() -- _1.Script 
 	local script = Instance.new('Script', _1)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:GetObjects('rbxassetid://2180084478')[1].Source)()
 	end)
 end
-coroutine.wrap(XXPW_fake_script)()
-local function JISD_fake_script() -- _2.Script 
+coroutine.wrap(HTRGOQZ_fake_script)()
+local function RKUGXJ_fake_script() -- _2.Script 
 	local script = Instance.new('Script', _2)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 	end)
 end
-coroutine.wrap(JISD_fake_script)()
-local function VHYUDO_fake_script() -- _3.Script 
+coroutine.wrap(RKUGXJ_fake_script)()
+local function IQKKN_fake_script() -- _3.Script 
 	local script = Instance.new('Script', _3)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
 	end)
 end
-coroutine.wrap(VHYUDO_fake_script)()
-local function BPGN_fake_script() -- _4.Script 
+coroutine.wrap(IQKKN_fake_script)()
+local function VATJAL_fake_script() -- _4.Script 
 	local script = Instance.new('Script', _4)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
 	end)
 end
-coroutine.wrap(BPGN_fake_script)()
-local function ZIQGPHE_fake_script() -- _5.Script 
+coroutine.wrap(VATJAL_fake_script)()
+local function OVJST_fake_script() -- _5.Script 
 	local script = Instance.new('Script', _5)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 	end)
 end
-coroutine.wrap(ZIQGPHE_fake_script)()
-local function ETQE_fake_script() -- _6.Script 
+coroutine.wrap(OVJST_fake_script)()
+local function NKYKPPY_fake_script() -- _6.Script 
 	local script = Instance.new('Script', _6)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 	end)
 end
-coroutine.wrap(ETQE_fake_script)()
-local function RJSMZK_fake_script() -- _7.Script 
+coroutine.wrap(NKYKPPY_fake_script)()
+local function DOGSYHG_fake_script() -- _7.Script 
 	local script = Instance.new('Script', _7)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NGHDDDX/SpectrumHubCC/master/SpectrumHub'),true))()
 	end)
 end
-coroutine.wrap(RJSMZK_fake_script)()
-local function PKVRKHW_fake_script() -- ExecutorFrame.Script 
+coroutine.wrap(DOGSYHG_fake_script)()
+local function KIIEY_fake_script() -- ExecutorFrame.Script 
 	local script = Instance.new('Script', ExecutorFrame)
 
 	script.Parent.ExecuteButton.MouseButton1Down:Connect(function()
-		script.Parent.TextBoxScroller.SynderTextBox.Text
+		loadstring(script.Parent.TextBoxScroller.SynderTextBox.Text)
 	end)
 	
 	script.Parent.ClearButton.MouseButton1Down:Connect(function()
@@ -365,8 +364,8 @@ local function PKVRKHW_fake_script() -- ExecutorFrame.Script
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NGHDDDX/SpectrumHubCC/master/SpectrumHub'),true))()
 	end)
 end
-coroutine.wrap(PKVRKHW_fake_script)()
-local function JFRDLUE_fake_script() -- ExecutorFrame.DraggingScript 
+coroutine.wrap(KIIEY_fake_script)()
+local function WKGPLA_fake_script() -- ExecutorFrame.DraggingScript 
 	local script = Instance.new('LocalScript', ExecutorFrame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -409,4 +408,4 @@ local function JFRDLUE_fake_script() -- ExecutorFrame.DraggingScript
 		end
 	end)
 end
-coroutine.wrap(JFRDLUE_fake_script)()
+coroutine.wrap(WKGPLA_fake_script)()

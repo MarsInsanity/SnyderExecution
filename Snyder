@@ -1,0 +1,412 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local SynderExecutor = Instance.new("ScreenGui")
+local ExecutorFrame = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local TextBoxScroller = Instance.new("ScrollingFrame")
+local SynderTextBox = Instance.new("TextBox")
+local ButtonBG1 = Instance.new("ImageLabel")
+local ExecuteButton = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local ScriptList = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local _1 = Instance.new("TextButton")
+local _2 = Instance.new("TextButton")
+local _3 = Instance.new("TextButton")
+local _4 = Instance.new("TextButton")
+local _5 = Instance.new("TextButton")
+local _6 = Instance.new("TextButton")
+local _7 = Instance.new("TextButton")
+local ButtonBG2 = Instance.new("ImageLabel")
+local ClearButton = Instance.new("TextButton")
+local ButtonBG3 = Instance.new("ImageLabel")
+local ScriptHubButton = Instance.new("TextButton")
+local OpenButton = Instance.new("ImageButton")
+
+--Properties:
+
+SynderExecutor.Name = "SynderExecutor"
+SynderExecutor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ExecutorFrame.Name = "ExecutorFrame"
+ExecutorFrame.Parent = SynderExecutor
+ExecutorFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ExecutorFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecutorFrame.BackgroundTransparency = 1.000
+ExecutorFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+ExecutorFrame.Size = UDim2.new(0, 572, 0, 300)
+ExecutorFrame.Image = "rbxassetid://3570695787"
+ExecutorFrame.ImageColor3 = Color3.fromRGB(23, 23, 23)
+ExecutorFrame.ScaleType = Enum.ScaleType.Slice
+ExecutorFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+ExecutorFrame.SliceScale = 0.120
+
+Title.Name = "Title"
+Title.Parent = ExecutorFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.00874125864, 0, 0, 0)
+Title.Size = UDim2.new(0, 200, 0, 30)
+Title.Font = Enum.Font.GothamBold
+Title.Text = "Snyder LE"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBoxScroller.Name = "TextBoxScroller"
+TextBoxScroller.Parent = ExecutorFrame
+TextBoxScroller.Active = true
+TextBoxScroller.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBoxScroller.BackgroundTransparency = 1.000
+TextBoxScroller.BorderSizePixel = 0
+TextBoxScroller.Position = UDim2.new(0.00825175084, 0, 0.100000001, 0)
+TextBoxScroller.Size = UDim2.new(0, 453, 0, 225)
+TextBoxScroller.CanvasSize = UDim2.new(0, 0, 100, 0)
+TextBoxScroller.ScrollBarThickness = 5
+
+SynderTextBox.Name = "SynderTextBox"
+SynderTextBox.Parent = TextBoxScroller
+SynderTextBox.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+SynderTextBox.Size = UDim2.new(1, 0, 1, 0)
+SynderTextBox.Font = Enum.Font.Code
+SynderTextBox.Text = ""
+SynderTextBox.TextColor3 = Color3.fromRGB(103, 103, 103)
+SynderTextBox.TextSize = 14.000
+SynderTextBox.TextWrapped = true
+SynderTextBox.TextXAlignment = Enum.TextXAlignment.Left
+SynderTextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+ButtonBG1.Name = "ButtonBG1"
+ButtonBG1.Parent = ExecutorFrame
+ButtonBG1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBG1.BackgroundTransparency = 1.000
+ButtonBG1.Position = UDim2.new(0.00896629877, 0, 0.880276084, 0)
+ButtonBG1.Selectable = true
+ButtonBG1.Size = UDim2.new(0, 100, 0, 24)
+ButtonBG1.Image = "rbxassetid://3570695787"
+ButtonBG1.ImageColor3 = Color3.fromRGB(33, 33, 33)
+ButtonBG1.ScaleType = Enum.ScaleType.Slice
+ButtonBG1.SliceCenter = Rect.new(100, 100, 100, 100)
+ButtonBG1.SliceScale = 0.050
+
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = ExecutorFrame
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ExecuteButton.BackgroundTransparency = 1.000
+ExecuteButton.BorderSizePixel = 0
+ExecuteButton.Position = UDim2.new(0.00874125864, 0, 0.879999876, 0)
+ExecuteButton.Size = UDim2.new(0, 100, 0, 24)
+ExecuteButton.Font = Enum.Font.Gotham
+ExecuteButton.Text = "Execute"
+ExecuteButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.TextSize = 14.000
+
+Exit.Name = "Exit"
+Exit.Parent = ExecutorFrame
+Exit.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.949300706, 0, -1.1920929e-07, 0)
+Exit.Size = UDim2.new(0, 29, 0, 29)
+Exit.Font = Enum.Font.GothamBold
+Exit.Text = "X"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextSize = 14.000
+
+Minimize.Name = "Minimize"
+Minimize.Parent = ExecutorFrame
+Minimize.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Minimize.BackgroundTransparency = 1.000
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.898601413, 0, -1.1920929e-07, 0)
+Minimize.Size = UDim2.new(0, 29, 0, 29)
+Minimize.Font = Enum.Font.GothamBold
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextSize = 14.000
+
+ScriptList.Name = "ScriptList"
+ScriptList.Parent = ExecutorFrame
+ScriptList.Active = true
+ScriptList.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ScriptList.BorderSizePixel = 0
+ScriptList.Position = UDim2.new(0.800209761, 0, 0.100000001, 0)
+ScriptList.Size = UDim2.new(0, 109, 0, 225)
+ScriptList.CanvasSize = UDim2.new(0, 0, 0.5, 0)
+ScriptList.ScrollBarThickness = 5
+
+UIGridLayout.Parent = ScriptList
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 0)
+UIGridLayout.CellSize = UDim2.new(1, 0, 0, 15)
+
+_1.Name = "1"
+_1.Parent = ScriptList
+_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1.BackgroundTransparency = 1.000
+_1.BorderSizePixel = 0
+_1.Size = UDim2.new(0, 200, 0, 50)
+_1.Font = Enum.Font.Code
+_1.Text = "DexV4.txt"
+_1.TextColor3 = Color3.fromRGB(103, 103, 103)
+_1.TextSize = 14.000
+_1.TextXAlignment = Enum.TextXAlignment.Left
+
+_2.Name = "2"
+_2.Parent = ScriptList
+_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2.BackgroundTransparency = 1.000
+_2.BorderSizePixel = 0
+_2.Size = UDim2.new(0, 200, 0, 50)
+_2.Font = Enum.Font.Code
+_2.Text = "IFYE.txt"
+_2.TextColor3 = Color3.fromRGB(103, 103, 103)
+_2.TextSize = 14.000
+_2.TextXAlignment = Enum.TextXAlignment.Left
+
+_3.Name = "3"
+_3.Parent = ScriptList
+_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3.BackgroundTransparency = 1.000
+_3.BorderSizePixel = 0
+_3.Size = UDim2.new(0, 200, 0, 50)
+_3.Font = Enum.Font.Code
+_3.Text = "JBAutorob.txt"
+_3.TextColor3 = Color3.fromRGB(103, 103, 103)
+_3.TextSize = 14.000
+_3.TextXAlignment = Enum.TextXAlignment.Left
+
+_4.Name = "4"
+_4.Parent = ScriptList
+_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4.BackgroundTransparency = 1.000
+_4.BorderSizePixel = 0
+_4.Size = UDim2.new(0, 200, 0, 50)
+_4.Font = Enum.Font.Code
+_4.Text = "KrakenHub.txt"
+_4.TextColor3 = Color3.fromRGB(103, 103, 103)
+_4.TextSize = 14.000
+_4.TextXAlignment = Enum.TextXAlignment.Left
+
+_5.Name = "5"
+_5.Parent = ScriptList
+_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5.BackgroundTransparency = 1.000
+_5.BorderSizePixel = 0
+_5.Size = UDim2.new(0, 200, 0, 50)
+_5.Font = Enum.Font.Code
+_5.Text = "MM2.txt"
+_5.TextColor3 = Color3.fromRGB(103, 103, 103)
+_5.TextSize = 14.000
+_5.TextXAlignment = Enum.TextXAlignment.Left
+
+_6.Name = "6"
+_6.Parent = ScriptList
+_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6.BackgroundTransparency = 1.000
+_6.BorderSizePixel = 0
+_6.Size = UDim2.new(0, 200, 0, 50)
+_6.Font = Enum.Font.Code
+_6.Text = "OwlHub.txt"
+_6.TextColor3 = Color3.fromRGB(103, 103, 103)
+_6.TextSize = 14.000
+_6.TextXAlignment = Enum.TextXAlignment.Left
+
+_7.Name = "7"
+_7.Parent = ScriptList
+_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7.BackgroundTransparency = 1.000
+_7.BorderSizePixel = 0
+_7.Size = UDim2.new(0, 200, 0, 50)
+_7.Font = Enum.Font.Code
+_7.Text = "SpectrumHub.txt"
+_7.TextColor3 = Color3.fromRGB(103, 103, 103)
+_7.TextSize = 14.000
+_7.TextXAlignment = Enum.TextXAlignment.Left
+
+ButtonBG2.Name = "ButtonBG2"
+ButtonBG2.Parent = ExecutorFrame
+ButtonBG2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBG2.BackgroundTransparency = 1.000
+ButtonBG2.Position = UDim2.new(0.200000003, 0, 0.879999995, 0)
+ButtonBG2.Selectable = true
+ButtonBG2.Size = UDim2.new(0, 100, 0, 24)
+ButtonBG2.Image = "rbxassetid://3570695787"
+ButtonBG2.ImageColor3 = Color3.fromRGB(33, 33, 33)
+ButtonBG2.ScaleType = Enum.ScaleType.Slice
+ButtonBG2.SliceCenter = Rect.new(100, 100, 100, 100)
+ButtonBG2.SliceScale = 0.050
+
+ClearButton.Name = "ClearButton"
+ClearButton.Parent = ExecutorFrame
+ClearButton.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ClearButton.BackgroundTransparency = 1.000
+ClearButton.BorderSizePixel = 0
+ClearButton.Position = UDim2.new(0.200000003, 0, 0.879999995, 0)
+ClearButton.Size = UDim2.new(0, 100, 0, 24)
+ClearButton.Font = Enum.Font.Gotham
+ClearButton.Text = "Clear"
+ClearButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClearButton.TextSize = 14.000
+
+ButtonBG3.Name = "ButtonBG3"
+ButtonBG3.Parent = ExecutorFrame
+ButtonBG3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBG3.BackgroundTransparency = 1.000
+ButtonBG3.Position = UDim2.new(0.800209761, 0, 0.876666665, 0)
+ButtonBG3.Selectable = true
+ButtonBG3.Size = UDim2.new(0, 108, 0, 24)
+ButtonBG3.Image = "rbxassetid://3570695787"
+ButtonBG3.ImageColor3 = Color3.fromRGB(33, 33, 33)
+ButtonBG3.ScaleType = Enum.ScaleType.Slice
+ButtonBG3.SliceCenter = Rect.new(100, 100, 100, 100)
+ButtonBG3.SliceScale = 0.050
+
+ScriptHubButton.Name = "ScriptHubButton"
+ScriptHubButton.Parent = ExecutorFrame
+ScriptHubButton.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ScriptHubButton.BackgroundTransparency = 1.000
+ScriptHubButton.BorderSizePixel = 0
+ScriptHubButton.Position = UDim2.new(0.800209761, 0, 0.876666665, 0)
+ScriptHubButton.Size = UDim2.new(0, 108, 0, 24)
+ScriptHubButton.Font = Enum.Font.Gotham
+ScriptHubButton.Text = "Script Hub"
+ScriptHubButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHubButton.TextSize = 14.000
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = SynderExecutor
+OpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.BackgroundTransparency = 1.000
+OpenButton.BorderSizePixel = 0
+OpenButton.Position = UDim2.new(0, 870, 0, -32)
+OpenButton.Size = UDim2.new(0, 32, 0, 32)
+OpenButton.Image = "rbxassetid://5027411759"
+OpenButton.ImageColor3 = Color3.fromRGB(0, 0, 0)
+OpenButton.ImageTransparency = 0.500
+
+-- Scripts:
+
+local function XXPW_fake_script() -- _1.Script 
+	local script = Instance.new('Script', _1)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:GetObjects('rbxassetid://2180084478')[1].Source)()
+	end)
+end
+coroutine.wrap(XXPW_fake_script)()
+local function JISD_fake_script() -- _2.Script 
+	local script = Instance.new('Script', _2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+	end)
+end
+coroutine.wrap(JISD_fake_script)()
+local function VHYUDO_fake_script() -- _3.Script 
+	local script = Instance.new('Script', _3)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
+	end)
+end
+coroutine.wrap(VHYUDO_fake_script)()
+local function BPGN_fake_script() -- _4.Script 
+	local script = Instance.new('Script', _4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/Kraken_Hub.txt", true))()
+	end)
+end
+coroutine.wrap(BPGN_fake_script)()
+local function ZIQGPHE_fake_script() -- _5.Script 
+	local script = Instance.new('Script', _5)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+	end)
+end
+coroutine.wrap(ZIQGPHE_fake_script)()
+local function ETQE_fake_script() -- _6.Script 
+	local script = Instance.new('Script', _6)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	end)
+end
+coroutine.wrap(ETQE_fake_script)()
+local function RJSMZK_fake_script() -- _7.Script 
+	local script = Instance.new('Script', _7)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NGHDDDX/SpectrumHubCC/master/SpectrumHub'),true))()
+	end)
+end
+coroutine.wrap(RJSMZK_fake_script)()
+local function PKVRKHW_fake_script() -- ExecutorFrame.Script 
+	local script = Instance.new('Script', ExecutorFrame)
+
+	script.Parent.ExecuteButton.MouseButton1Down:Connect(function()
+		script.Parent.TextBoxScroller.SynderTextBox.Text
+	end)
+	
+	script.Parent.ClearButton.MouseButton1Down:Connect(function()
+		script.Parent.TextBoxScroller.SynderTextBox.Text = ""
+	end)
+	
+	script.Parent.ScriptHubButton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NGHDDDX/SpectrumHubCC/master/SpectrumHub'),true))()
+	end)
+end
+coroutine.wrap(PKVRKHW_fake_script)()
+local function JFRDLUE_fake_script() -- ExecutorFrame.DraggingScript 
+	local script = Instance.new('LocalScript', ExecutorFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(JFRDLUE_fake_script)()

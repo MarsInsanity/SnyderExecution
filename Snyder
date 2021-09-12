@@ -353,7 +353,7 @@ local function KIIEY_fake_script() -- ExecutorFrame.Script
 	local script = Instance.new('Script', ExecutorFrame)
 
 	script.Parent.ExecuteButton.MouseButton1Down:Connect(function()
-		loadstring(script.Parent.TextBoxScroller.SynderTextBox.Text)
+		assert(loadstring(script.Parent.TextBoxScroller.SynderTextBox.Text))()
 	end)
 	
 	script.Parent.ClearButton.MouseButton1Down:Connect(function()
